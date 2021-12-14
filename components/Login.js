@@ -46,7 +46,9 @@ class Login extends React.Component{
     setUser = async(name)=>{
       try{
         await AsyncStorage.setItem("userName",name)
-      }catch(error){}
+      }catch(error){
+         console.log("Exception occured when setting user");
+      }
     }
     getUser = async() =>{
       try{
@@ -56,7 +58,9 @@ class Login extends React.Component{
           
         this.props.Login(name);
         }
-      }catch(error){}
+      }catch(error){
+         console.log("Exception occured when getting user");
+      }
       
     };
     
